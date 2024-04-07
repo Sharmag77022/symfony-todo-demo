@@ -1,0 +1,34 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello HomeController!{% endblock %}
+
+{% block body %}
+
+<div class="hero-section">
+  <div class="hero-background"></div>
+  <div class="overlay"></div>
+  <div class="hero-content container">
+    <h1 class="hero-heading">Todo List App Demo</h1>
+    <p class="hero-description">A simple demo application built with Symfony</p>
+  </div>
+</div>
+
+<div class="container">
+  <h2 class="mt-5 mb-4">Features:</h2>
+  <ul>
+    <li>Create new todo items</li>
+    <li>Mark todo items as completed</li>
+    <li>Delete todo items</li>
+    <li>Edit todo items</li>
+  </ul>
+
+  <h2 class="mt-5 mb-4">Technology Stack:</h2>
+  <ul>
+    <li>Symfony Framework</li>
+    <li>Bootstrap for styling</li>
+    <li>MySQL or any other database for data storage</li>
+  </ul>
+
+  <p class="mt-5">This demo app demonstrates the basic functionality of a todo list application. It can be extended further with additional features and enhancements.</p>
+</div>
+{% endblock %}
