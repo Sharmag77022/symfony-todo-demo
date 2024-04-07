@@ -72,9 +72,9 @@ class Task
         return $this->is_completed;
     }
 
-    public function setCompleted(bool $is_completed): static
+    public function setIsCompleted(bool $is_completedd): static
     {
-        $this->is_completed = $is_completed;
+        $this->is_completed = $is_completedd;
 
         return $this;
     }

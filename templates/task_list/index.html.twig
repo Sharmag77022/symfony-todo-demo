@@ -8,13 +8,25 @@
     .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
 </style>
 
-<div class="example-wrapper">
-    <h1>Hello {{ controller_name }}! ✅</h1>
-
-    This friendly message is coming from:
-    <ul>
-        <li>Your controller at <code>E:/symfony learn/todolist/src/Controller/TaskListController.php</code></li>
-        <li>Your template at <code>E:/symfony learn/todolist/templates/task_list/index.html.twig</code></li>
-    </ul>
-</div>
+<div class="container mt-4">
+        <h1>Task List</h1>
+        <ul class="list-group">
+            <!-- Example task item -->
+            <li class="list-group-item">
+                <div class="d-flex justify-content-between align-items-center">
+                    <div>
+                        <h5>Task Name</h5>
+                        <p>Description of the task</p>
+                        <p>Date: 2024-04-10</p>
+                    </div>
+                    <div>
+                        <input type="checkbox" checked > <!-- Completed checkbox -->
+                        <button class="btn btn-danger btn-sm ml-2">Delete</button> <!-- Delete button -->
+                    </div>
+                    
+                </div>
+            </li>
+            <!-- Add more task items here -->
+        </ul>
+    </div>
 {% endblock %}
