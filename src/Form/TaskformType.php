@@ -4,6 +4,7 @@ namespace App\Form;
 
 use App\Entity\Task;
 use Symfony\Component\Form\AbstractType;
+use Symfony\Component\Form\Extension\Core\Type\SubmitType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
 
@@ -18,6 +19,10 @@ class TaskformType extends AbstractType
                 'widget' => 'single_text'
             ])
             ->add('is_completed')
+            // ->add('submit', SubmitType::class, [
+            //     'label' => 'Submit',
+            //     'attr' => ['class' => 'btn btn-primary']
+            // ]);
         ;
     }
 

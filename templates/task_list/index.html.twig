@@ -31,13 +31,43 @@
                         <p>Date: {{ task.getDateTime()|date('Y-m-d')}}</p>
                     </div>
                     <div>
-                        <input type="checkbox" {% if task.isCompleted() %}checked{% endif %}> <!-- Completed checkbox -->
-                        <a class="btn btn-danger btn-sm ml-2" href="{{path('app_task_complete',{'id': task.id})}}">Delete</a> <!-- Delete button -->
+                        <input type="hidden" name="box1" value="0">
+                        <input type="checkbox" {% if task.isCompleted() %}checked{% endif %} value="yes" onChange='taskStatusChange(event, {{ task.id }})'> <!-- Completed checkbox -->
+                        <a class="btn btn-danger btn-sm ml-2" href="{{path('app_task_delete',{'id': task.id})}}">Delete</a> <!-- Delete button -->
                     </div>
                 </div>
             </li>
         {% endfor %}
 
         {% endif %}
+    
     </div>
+    <script>
+    function taskStatusChange(event, taskId){
+    
+    const val = event.target.checked?1:0;
+    const url = `/taskCompleted/${taskId}/${val}`; // Construct the URL
+
+    // Send a POST request to the specified route
+    fetch(url, {
+        method: 'GET',
+        headers: {
+            'Content-Type': 'application/json', // Set the content type
+        },
+    })
+        .then(response => {
+            if (response.ok) {
+                console.log('Request successful');
+                // Handle success (e.g., update UI)
+            } else {
+                console.error('Request failed');
+                // Handle error (e.g., show an error message)
+            }
+        })
+        .catch(error => {
+            console.error('Network error:', error);
+            // Handle network error (e.g., show an error message)
+        });
+    }
+    </script>
 {% endblock %}
