@@ -1,0 +1,32 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}About todo list{% endblock %}
+
+{% block body %}
+<style>
+    .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
+    .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
+</style>
+<div class="container">
+        <div class="jumbotron">
+            <h1 class="display-4">About Sample Todo List App</h1>
+            <p class="lead">This Todo List App is a simple yet powerful task management application built using Symfony, a popular PHP framework, along with the Twig templating engine for front-end rendering and MySQL database for data storage.</p>
+            <hr class="my-4">
+            <h3>Key Features:</h3>
+            <ul>
+                <li><strong>Task Management:</strong> This Todo List allows users to easily create, store, update, and delete tasks. Users can add new tasks, update existing ones, mark tasks as completed, and delete tasks they no longer need.</li>
+                <li><strong>User-Friendly Interface:</strong> The application features an intuitive and user-friendly interface, making it easy for users to navigate and manage their tasks efficiently.</li>
+                <li><strong>Symfony Framework:</strong> The app is built using the Symfony framework, which provides a solid foundation for developing robust web applications. Symfony's powerful features, such as routing, controllers, and form handling, are utilized to create a seamless user experience.</li>
+                <li><strong>Twig Templating Engine:</strong> Twig, Symfony's default templating engine, is used to render the user interface of the application. Twig's syntax is clean and easy to understand, allowing for rapid development of dynamic web pages.</li>
+                <li><strong>MySQL Database:</strong> This Todo List stores task data in a MySQL database, ensuring data integrity and reliability. Tasks are stored in a structured manner, making it easy to retrieve and manipulate task data efficiently.</li>
+            </ul>
+            <h3>How to Use:</h3>
+            <ol>
+                <li><strong>Creating a Task:</strong> To create a new task, simply navigate to the "Add Task" page and fill out the task details, such as title, description, and due date. Click the "Add Task" button to save the task to the database.</li>
+                <li><strong>Updating a Task:</strong> To update an existing task, navigate to the task details page and click the "Edit" button. You can then modify the task details as needed and save your changes.</li>
+                <li><strong>Completing a Task:</strong> To mark a task as completed, simply click the checkbox next to the task on the task list page. Completed tasks are visually distinguished from incomplete tasks for easy identification.</li>
+                <li><strong>Deleting a Task:</strong> To delete a task, navigate to the task details page and click the "Delete" button. Confirm the deletion, and the task will be permanently removed from the database.</li>
+            </ol>
+        </div>
+    </div>
+{% endblock %}
